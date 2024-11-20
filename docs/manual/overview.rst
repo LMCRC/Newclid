@@ -8,6 +8,15 @@ Overview
 .. image:: ../_static/images/overview.drawio.svg
   :alt: overview diagram
 
+The metaphoric model is the agent (the brain) is trying to solve the rubric (proof state). Of one step, the agent do actions allowed by the proof state. The proof state can be observed by the agent.
+
+Example of match rule action:
+r34 AA Similarity of triangles (Direct)
+eqangle B A B C Q P Q R, eqangle C A C B R P R Q, sameclock A B C P Q R => simtri A B C P Q R
+
+It does the same procedure to each premise. For example to eqangle B A B C Q P Q R, it has a predicate, the functions in the predicate eqangle class is responsible for checking it, and construct explicitly the dependency to support it. Note that the premises in the new dependency may not be explicit in the dependency graph before, whence the whole story of symbolic graph and AR module.
+
+Now if all premises are checked, they can be constructed into a dependency, i.e. a hyper edge that can be added into the hyper graph.
 
 Proof State
 -----------
